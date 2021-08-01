@@ -92,3 +92,38 @@ articleElement.appendChild(pElement);
                 ulElement.appendChild(liElement);
                 //console.log(hourlySalesDubai[k])
               }
+
+            
+
+                  const paris = {
+                    minCust:20 ,
+                    maxCust:38 ,
+                    avgCookie: 2.3,
+                    
+                  custCount: function randomInt(min,max){
+                  min = Math.ceil(min);
+                  max = Math.floor(max);
+                  this.cusNumber = (Math.random() * (max - min + 1) + min);
+                  return this.cusNumber ;}  }
+                
+                let hourlySalesParis=[];
+                    for (let i=0 ; i<WH.length ; i++){
+                        let count=paris.custCount( paris.minCust , paris.maxCust );
+                        hourlySalesParis[i]= Math.floor(paris.avgCookie * count);
+                        // console.log(hourlySalesParis[i]);
+                    }
+                articleElement = document.getElementById('paris');
+                pElement=document.createElement('p');
+                pElement.textContent='paris';
+                articleElement.appendChild(pElement);
+                ulElement = document.createElement('ul');
+                    articleElement.appendChild(ulElement);
+                    for(let k = 0; k < WH.length; k++) {
+                        let liElement = document.createElement('li');
+                        liElement.textContent= WH[k] + '  :     '+ hourlySalesParis[k];
+                        ulElement.appendChild(liElement);
+                        //console.log(hourlySalesParis[k])
+                      }
+                  
+                  
+            
