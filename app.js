@@ -124,6 +124,36 @@ articleElement.appendChild(pElement);
                         ulElement.appendChild(liElement);
                         //console.log(hourlySalesParis[k])
                       }
+
+                      const lima = {
+                        minCust:20 ,
+                        maxCust:38 ,
+                        avgCookie: 2.3,
+                        
+                      custCount: function randomInt(min,max){
+                      min = Math.ceil(min);
+                      max = Math.floor(max);
+                      this.cusNumber = (Math.random() * (max - min + 1) + min);
+                      return this.cusNumber ;}  }
+                    
+                    let hourlySalesLima=[];
+                        for (let i=0 ; i<WH.length ; i++){
+                            let count=lima.custCount( lima.minCust , lima.maxCust );
+                            hourlySalesLima[i]= Math.floor(lima.avgCookie * count);
+                            // console.log(hourlySalesLima[i]);
+                        }
+                    articleElement = document.getElementById('lima');
+                    pElement=document.createElement('p');
+                    pElement.textContent='lima';
+                    articleElement.appendChild(pElement);
+                    ulElement = document.createElement('ul');
+                        articleElement.appendChild(ulElement);
+                        for(let k = 0; k < WH.length; k++) {
+                            let liElement = document.createElement('li');
+                            liElement.textContent= WH[k] + '  :     '+ hourlySalesLima[k];
+                            ulElement.appendChild(liElement);
+                            //console.log(hourlySalesLima[k])
+                          }
                   
                   
             
