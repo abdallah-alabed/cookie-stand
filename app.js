@@ -48,7 +48,7 @@ articleElement.appendChild(pElement);
         for (let i=0 ; i<WH.length ; i++){
             let count=tokyo.custCount( tokyo.minCust , tokyo.maxCust );
             hourlySalesTokyo[i]= Math.floor(tokyo.avgCookie * count);
-            // console.log(hourlySales[i]);
+            // console.log(hourlySalesTokyo[i]);
         }
     articleElement = document.getElementById('tokyo');
     pElement=document.createElement('p');
@@ -60,5 +60,35 @@ articleElement.appendChild(pElement);
             let liElement = document.createElement('li');
             liElement.textContent= WH[k] + '  :     '+ hourlySalesTokyo[k];
             ulElement.appendChild(liElement);
-            //console.log(hourlySales[k])
+            //console.log(hourlySalesTokyo[k])
           }
+
+          const dubai = {
+            minCust:11 ,
+            maxCust:38 ,
+            avgCookie: 3.7,
+            
+          custCount: function randomInt(min,max){
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          this.cusNumber = (Math.random() * (max - min + 1) + min);
+          return this.cusNumber ;}  }
+        
+        let hourlySalesDubai=[];
+            for (let i=0 ; i<WH.length ; i++){
+                let count=dubai.custCount( dubai.minCust , dubai.maxCust );
+                hourlySalesDubai[i]= Math.floor(dubai.avgCookie * count);
+                // console.log(hourlySalesDubai[i]);
+            }
+        articleElement = document.getElementById('dubai');
+        pElement=document.createElement('p');
+        pElement.textContent='dubai';
+        articleElement.appendChild(pElement);
+        ulElement = document.createElement('ul');
+            articleElement.appendChild(ulElement);
+            for(let k = 0; k < WH.length; k++) {
+                let liElement = document.createElement('li');
+                liElement.textContent= WH[k] + '  :     '+ hourlySalesDubai[k];
+                ulElement.appendChild(liElement);
+                //console.log(hourlySalesDubai[k])
+              }
