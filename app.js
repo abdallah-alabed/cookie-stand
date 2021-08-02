@@ -24,14 +24,20 @@ let articleElement = document.getElementById('seattle');
 let pElement=document.createElement('p');
 pElement.textContent='Seattle';
 articleElement.appendChild(pElement);
+let totalElem =document.createElement('li');
   let ulElement = document.createElement('ul');
     articleElement.appendChild(ulElement);
+    let sum=0;
     for(let k = 0; k < WH.length; k++) {
         let liElement = document.createElement('li');
         liElement.textContent= WH[k] + '  :     '+ hourlySalesSeattle[k];
         ulElement.appendChild(liElement);
+        sum += hourlySalesSeattle[k];
+        totalElem.textContent= 'total' + '  :     '+ sum;
+        ulElement.appendChild(totalElem);
         //console.log(hourlySalesSeattle[k])
       }
+      
 
       const tokyo = {
         minCust:3 ,
@@ -43,7 +49,7 @@ articleElement.appendChild(pElement);
       max = Math.floor(max);
       this.cusNumber = (Math.random() * (max - min + 1) + min);
       return this.cusNumber ;}  }
-    
+
     let hourlySalesTokyo=[];
         for (let i=0 ; i<WH.length ; i++){
             let count=tokyo.custCount( tokyo.minCust , tokyo.maxCust );
@@ -54,12 +60,17 @@ articleElement.appendChild(pElement);
     pElement=document.createElement('p');
     pElement.textContent='tokyo';
     articleElement.appendChild(pElement);
+    totalElem =document.createElement('li');
     ulElement = document.createElement('ul');
         articleElement.appendChild(ulElement);
+         sum=0;
         for(let k = 0; k < WH.length; k++) {
             let liElement = document.createElement('li');
             liElement.textContent= WH[k] + '  :     '+ hourlySalesTokyo[k];
             ulElement.appendChild(liElement);
+            sum += hourlySalesTokyo[k];
+            totalElem.textContent= 'total' + '  :     '+ sum;
+            ulElement.appendChild(totalElem);
             //console.log(hourlySalesTokyo[k])
           }
 
@@ -84,15 +95,20 @@ articleElement.appendChild(pElement);
         pElement=document.createElement('p');
         pElement.textContent='dubai';
         articleElement.appendChild(pElement);
+        totalElem =document.createElement('li');
         ulElement = document.createElement('ul');
             articleElement.appendChild(ulElement);
+            sum=0;
             for(let k = 0; k < WH.length; k++) {
                 let liElement = document.createElement('li');
                 liElement.textContent= WH[k] + '  :     '+ hourlySalesDubai[k];
                 ulElement.appendChild(liElement);
+                sum += hourlySalesDubai[k];
+            totalElem.textContent= 'total' + '  :     '+ sum;
+            ulElement.appendChild(totalElem);
                 //console.log(hourlySalesDubai[k])
               }
-
+        
             
 
                   const paris = {
@@ -116,12 +132,17 @@ articleElement.appendChild(pElement);
                 pElement=document.createElement('p');
                 pElement.textContent='paris';
                 articleElement.appendChild(pElement);
+                totalElem =document.createElement('li');
                 ulElement = document.createElement('ul');
                     articleElement.appendChild(ulElement);
+                    sum=0;
                     for(let k = 0; k < WH.length; k++) {
                         let liElement = document.createElement('li');
                         liElement.textContent= WH[k] + '  :     '+ hourlySalesParis[k];
                         ulElement.appendChild(liElement);
+                        sum += hourlySalesParis[k];
+            totalElem.textContent= 'total' + '  :     '+ sum;
+            ulElement.appendChild(totalElem);
                         //console.log(hourlySalesParis[k])
                       }
 
@@ -146,12 +167,17 @@ articleElement.appendChild(pElement);
                     pElement=document.createElement('p');
                     pElement.textContent='lima';
                     articleElement.appendChild(pElement);
+                    totalElem =document.createElement('li');
                     ulElement = document.createElement('ul');
                         articleElement.appendChild(ulElement);
+                        sum=0;
                         for(let k = 0; k < WH.length; k++) {
                             let liElement = document.createElement('li');
                             liElement.textContent= WH[k] + '  :     '+ hourlySalesLima[k];
                             ulElement.appendChild(liElement);
+                            sum += hourlySalesLima[k];
+            totalElem.textContent= 'total' + '  :     '+ sum;
+            ulElement.appendChild(totalElem);
                             //console.log(hourlySalesLima[k])
                           }
                   
