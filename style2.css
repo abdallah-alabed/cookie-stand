@@ -1,0 +1,14 @@
+th, td {
+    border: darkblue;
+    border-style:solid;
+    text-align: center;
+    width: 6%;
+    background-color: cornsilk;
+    color: darkblue;
+}
+a {
+    font-size: xx-large;
+    color: darkred;
+    background-color: deepskyblue;
+    text-decoration: none;
+}
