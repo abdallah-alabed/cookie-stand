@@ -33,7 +33,7 @@ Sales.prototype.daily= function (name){
 name.totalCookies=final;}
 
 
-
+let New = document.getElementById('New');
 let storesLocation = document.getElementById('storesLocation');
 let tableElement=document.createElement('table');
 storesLocation.appendChild(tableElement);
@@ -53,7 +53,7 @@ let renderHead = function(){
     tr1.appendChild(th);
   }
   let th1=document.createElement('th');
-  th1.textContent='location';
+  th1.textContent='total';
   tr1.appendChild(th1);
 }
 
@@ -73,10 +73,10 @@ Sales.prototype.renderBody= function (ObjLocation){
     trElement.appendChild(tdElement);
 
     rowTotal += parseInt(ObjLocation.hourlySales[i]);
-    console.log(totalArray);
+    //console.log(totalArray);
 
     totalArray[i] += parseInt(ObjLocation.hourlySales[i]);
-    console.log(totalArray[i]);
+    //console.log(totalArray[i]);
   }
   let tdElement1 = document.createElement('td');
   tdElement1.textContent = rowTotal;
@@ -87,6 +87,8 @@ Sales.prototype.renderBody= function (ObjLocation){
   
 
 };
+
+
 
 let renderFoot = function() {
   let trElement = document.createElement('tr');
@@ -106,11 +108,14 @@ let renderFoot = function() {
   thElement2.textContent = totalColumn;
   trElement.appendChild(thElement2);
 
-
+  
 }
+
+
 
 function locations(){
 let seattle = new Sales('seattle',23,65,6.3);
+console.log(seattle)
 seattle.daily(seattle);
 let tokyo   = new Sales('tokyo',3,24,1.2);
 tokyo.daily(tokyo);
@@ -128,14 +133,44 @@ tokyo.renderBody(tokyo);
 dubai.renderBody(dubai);
 paris.renderBody(paris);
 lima.renderBody(lima);
-renderFoot();
-
-
-
 
 }
 
-locations();
+
+
+
+New.addEventListener("submit",addLocation);
+
+
+function addLocation(event, locName, minCust, maxCust, avgCookie){
+event.preventDefault();
+locName= event.target.locName.value;
+minCust= event.target.minimumCustomers.value;
+maxCust= event.target.maximumCustomers.value;
+avgCookie= event.target.avgCookie.value;
+
+  
+let newLocation=[];
+newLocation=[locName, Number(minCust),Number(maxCust), Number(avgCookie)];
+//console.log(newLocation)
+newLocation= new Sales(newLocation[0], newLocation[1], newLocation[2], newLocation[3])
+console.log(newLocation)
+newLocation.daily(newLocation)
+newLocation.renderBody(newLocation)
+
+renderFoot();
+
+}
+
+
+
+  locations();
+ 
+
+
+
+
+
   
     
 

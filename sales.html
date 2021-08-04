@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
     <title>Cookie-stand</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <header></header>
     <main>
-    <article id='storesLocation'></article>
     
+
+    <fieldset>
+        <legend> Add new location suggestion </legend>
+    <form id="New">
+        <label for="locName" class="text"> location Name </label>
+        <input type="text" name="location Name" id="locName">
+        
+    
+        <label for="minimumCustomers" class="text"> minimum daily customers </label>
+        <input type="text" name="minimum daily customers" id="minimumCustomers">
+    
+        <label for="maximumCustomers" class="text"> maximum daily customers </label>
+        <input type="text" name="maximum daily customers" id="maximumCustomers">
+    
+    
+        <label for="avgCookie" class="text"> average cookies </label>
+        <input type="text" name="average cookies" id="avgCookie">
+    
+        <input type="submit" value="Submit Suggestion">
+    
+    
+    </form>
+    </fieldset>
+    <article id='storesLocation'></article>
 <footer>
     
+    <a href="./index.html"> back to the home page </a>
 </footer>
 
 
