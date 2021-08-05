@@ -1,7 +1,11 @@
+body{
+    background-color: khaki;
+}
 header{
 display: grid;
 grid-template-columns: auto auto;
 gap: 30px;
+
 
 }
 header img {
@@ -12,7 +16,7 @@ h1 {
     color: firebrick;
     background-color: beige;
     font: oblique;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cursive;
     font-size: xx-large;
 }
 main{
@@ -20,19 +24,19 @@ main{
 }
 h2{
 color: firebrick;
-font-family:Georgia, 'Times New Roman', Times, serif;
+font-family:cursive;
 
 }
 h3{
     color: firebrick;
-    background-color: khaki;
+    background-color: rgb(212, 195, 37);
     margin: 30px;
 }
 
 ol {
 
-background-color: rgb(195, 223, 233);
-color: darkblue;
+background-color: firebrick;
+color: rgb(255, 255, 255);
 
 
 }
@@ -52,7 +56,8 @@ display: grid;
 grid-template-columns: 325px 325px 325px ;
 width: 100%;
 height: 100%;
-gap: 20px;}
+gap: 20px;
+background-color: lightblue ;}
 
 figcaption {
 
@@ -66,4 +71,7 @@ figcaption {
     width: 250px;
     height: 180px;
 
+}
+p {
+    font-family:  Georgia;
 }

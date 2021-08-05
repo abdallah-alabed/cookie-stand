@@ -143,7 +143,7 @@ New.addEventListener("submit",addLocation);
 
 
 function addLocation(event, locName, minCust, maxCust, avgCookie){
-event.preventDefault();
+  event.preventDefault();
 locName= event.target.locName.value;
 minCust= event.target.minimumCustomers.value;
 maxCust= event.target.maximumCustomers.value;

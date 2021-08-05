@@ -1,3 +1,6 @@
+body{
+    background-color: lightcoral;
+}
 th, td {
     border: darkblue;
     border-style:solid;
@@ -5,10 +8,24 @@ th, td {
     width: 6%;
     background-color: cornsilk;
     color: darkblue;
+    font-family: Arial;
 }
 a {
     font-size: xx-large;
-    color: darkred;
-    background-color: deepskyblue;
+    color: white;
     text-decoration: none;
+    padding-left: 370px;
+}
+fieldset {
+    border-color:darkblue;
+    border-radius: 12px;
+    border-style: dotted;
+    border-width: 5px;
+}
+label {
+    color: cornsilk;
+    
+}
+input {
+    background-color: lightsteelblue;
 }
